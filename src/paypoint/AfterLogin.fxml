@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paypoint.AfterLogin">
+   <children>
+      <VBox prefHeight="900.0" prefWidth="1602.0">
+         <children>
+            <TabPane fx:id="tabPane" prefHeight="909.0" prefWidth="1600.0" styleClass="tab-pane-modern" stylesheets="@styles.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Home">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="779.0" prefWidth="1280.0">
+                           <children>
+                              <Label layoutX="105.0" layoutY="19.0" prefHeight="27.0" prefWidth="101.0" styleClass="label-modern" text="Total Due:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <Label layoutX="105.0" layoutY="53.0" text="Tendered Amount in Denominations: ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <TextField fx:id="totalDueField" layoutX="205.0" layoutY="17.0" prefHeight="17.0" prefWidth="148.0" styleClass="input-modern" />
+                              <Label layoutX="105.0" layoutY="242.0" text="Change Breakdown: ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <Label layoutX="107.0" layoutY="489.0" text="Current Inventory: ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <TableView fx:id="denominationTable" layoutX="88.0" layoutY="516.0" prefHeight="315.0" prefWidth="1415.0" styleClass="table-modern" stylesheets="@styles.css">
+                                <columns>
+                                  <TableColumn fx:id="denominationColumn" prefWidth="712.7999801635742" text="Denomination" />
+                                  <TableColumn fx:id="quantityColumn" prefWidth="672.0" text="Available" />
+                                </columns>
+                              </TableView>
+                              <Spinner fx:id="mySpinner" editable="true" layoutX="178.0" layoutY="85.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Label layoutX="126.0" layoutY="89.0" text="₱ 1000" />
+                              <Label layoutX="129.0" layoutY="127.0" text="₱ 500" />
+                              <Spinner fx:id="mySpinner1" editable="true" layoutX="178.0" layoutY="123.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Label layoutX="129.0" layoutY="167.0" text="₱ 200" />
+                              <Spinner fx:id="mySpinner2" editable="true" layoutX="178.0" layoutY="163.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Spinner fx:id="mySpinner3" editable="true" layoutX="344.0" layoutY="84.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Label layoutX="304.0" layoutY="88.0" text="₱ 100" />
+                              <Label layoutX="307.0" layoutY="126.0" text="₱ 50" />
+                              <Spinner fx:id="mySpinner4" editable="true" layoutX="344.0" layoutY="122.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Label layoutX="307.0" layoutY="166.0" text="₱ 20" />
+                              <Spinner fx:id="mySpinner5" editable="true" layoutX="344.0" layoutY="162.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Spinner fx:id="mySpinner6" editable="true" layoutX="519.0" layoutY="84.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Label layoutX="485.0" layoutY="88.0" text="₱ 10" />
+                              <Label layoutX="488.0" layoutY="126.0" text="₱ 5" />
+                              <Spinner fx:id="mySpinner7" editable="true" layoutX="519.0" layoutY="122.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Label layoutX="488.0" layoutY="167.0" text="₱ 1" />
+                              <Spinner fx:id="mySpinner8" editable="true" layoutX="519.0" layoutY="162.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
+                              <Line endX="-105.79998779296875" endY="-346.0" layoutX="906.0" layoutY="341.0" startX="-105.79998779296875" startY="175.0" />
+                              <Label layoutX="833.0" layoutY="206.0" text="Response:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <Label layoutX="830.0" layoutY="5.0" text="Prompt:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <BorderPane layoutX="1517.0" layoutY="13.0" prefHeight="50.0" prefWidth="70.0">
+                                 <center>
+                                    <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="70.0" styleClass="logoutButton" stylesheets="@styles.css" text="Logout" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <Line endX="-105.79998779296875" endY="-346.0" layoutX="1610.0" layoutY="349.0" startX="-105.800048828125" startY="522.199951171875" />
+                              
+                              <VBox layoutX="830.0" layoutY="36.0" maxHeight="200.0" prefHeight="111.0" prefWidth="641.0" spacing="10.0">
+                                 <children>
+                                    <TextArea fx:id="promptArea" prefHeight="111.0" prefWidth="650.0" styleClass="promptArea" stylesheets="@styles.css" wrapText="true" />
+                                 </children>
+                              </VBox>
+
+                              <Label layoutX="105.0" layoutY="201.0" text="Total Amount: ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <TextField fx:id="totalAmountField" layoutX="249.0" layoutY="202.0" />
+                              <Line endX="-105.79998779296875" endY="-346.0" layoutX="184.0" layoutY="346.0" startX="-105.79998016357422" startY="525.2000122070312" />
+                              <Button fx:id="promptButton" layoutX="1103.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleRunOllama" prefHeight="31.0" prefWidth="111.0" styleClass="button-modern" stylesheets="@styles.css" text="Enter">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Button>
+                              <!-- Response TextArea with wrapText enabled -->
+                              <TextArea fx:id="responseArea" layoutX="830.0" layoutY="240.0" prefHeight="206.0" prefWidth="642.0" styleClass="responseArea" stylesheets="@styles.css" wrapText="true" />
+                              <TextArea fx:id="changeArea" layoutX="105.0" layoutY="279.0" prefHeight="204.0" prefWidth="663.0" styleClass="changeArea" stylesheets="@styles.css" wrapText="true" />
+                              <Button fx:id="recordButton" layoutX="626.0" layoutY="111.0" mnemonicParsing="false" onAction="#recordTransact" prefHeight="46.0" prefWidth="122.0" styleClass="button-modern" stylesheets="@styles.css" text="Record">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font></Button>
+                              <FontAwesomeIconView fx:id="resetButton" glyphName="TRASH" layoutX="753.0" layoutY="37.0" onMouseClicked="#resetField" size="30" styleClass="resetButton" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Transactions and Inventory">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="895.0">
+                           <children>
+                              <TableView fx:id="denominationTable1" layoutX="891.0" layoutY="78.0" prefHeight="733.0" prefWidth="634.0">
+                                <columns>
+                                  <TableColumn fx:id="denominationColumn1" prefWidth="300.80010986328125" text="Denominations" />
+                                  <TableColumn fx:id="quantityColumn1" prefWidth="294.39990234375" text="Available" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="transactionTable" layoutX="69.0" layoutY="81.0" prefHeight="734.0" prefWidth="740.0">
+                                <columns>
+                                  <TableColumn fx:id="transactionIDColumn" prefWidth="114.4000244140625" text="Transaction ID" />
+                                  <TableColumn fx:id="totalDueColumn" minWidth="0.0" prefWidth="129.5998992919922" text="Total Due" />
+                                    <TableColumn fx:id="totalAmountColumn" minWidth="0.0" prefWidth="133.5999755859375" text="Tendered Amount" />
+                                    <TableColumn fx:id="totalChangeColumn" minWidth="0.0" prefWidth="133.5999755859375" text="Total Change" />
+                                    <TableColumn fx:id="transactDateColumn" prefWidth="194.39990234375" text="Transaction Date" />
+                                </columns>
+                              </TableView>
+                              <AnchorPane layoutX="53.0" layoutY="5.0" minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="262.0">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="21.0" text="Total: ">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="totalMoneyField" layoutX="77.0" layoutY="15.0" prefHeight="10.0" prefWidth="161.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Report and Analytics">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="895.0">
+                           <children>
+                              <Pane layoutX="78.0" layoutY="36.0" prefHeight="614.0" prefWidth="759.0" styleClass="linePane" stylesheets="@styles.css">
+                                 <children>
+                                    <LineChart fx:id="lineChart" layoutX="135.0" layoutY="64.0" title="Transaction Volume">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                    <ComboBox fx:id="intervalComboBox" layoutX="164.0" layoutY="26.0" prefWidth="150.0" promptText="Select Interval" />
+                                    <Label layoutX="178.0" layoutY="496.0" text="Total Transaction: ">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="226.0" layoutY="537.0" text="Total Profit:">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="totalTransactionsField" layoutX="342.0" layoutY="498.0" />
+                                    <TextField fx:id="totalProfitField" layoutX="342.0" layoutY="538.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="895.0" layoutY="35.0" prefHeight="611.0" prefWidth="618.0">
+                                 <children>
+                                    <PieChart fx:id="pieChart" layoutX="-1.0" layoutY="4.0" prefHeight="609.0" prefWidth="625.0" styleClass="piePane" stylesheets="@styles.css" title="Denomination Distribution" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                </Tab>
+                <Tab text="Help">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="895.0">
+                           <children>
+                              <Label layoutX="46.0" layoutY="41.0" prefHeight="35.0" prefWidth="337.0" text="Help &amp; Support - PayPoint">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="765.0" layoutY="39.0" prefHeight="35.0" prefWidth="285.0" text="Using the AI Assistant">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="42.0" layoutY="276.0" prefHeight="38.0" prefWidth="219.0" text="Getting Started">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="776.0" layoutY="365.0" prefHeight="35.0" prefWidth="395.0" text="Common Issues &amp; Solutions">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="helpArea" layoutX="117.0" layoutY="95.0" prefHeight="158.0" prefWidth="523.0" text="PayPoint is a cash register system designed to streamline transactions and provide an efficient point-of-sale experience. This guide will help you navigate its features and troubleshoot any issues you may encounter." wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                              <TextArea fx:id="helpArea1" layoutX="118.0" layoutY="341.0" prefHeight="450.0" prefWidth="523.0" text="Logging In&#10;- Enter your username and password in the login screen.&#10;- Press Enter or click the Login button.&#10;- Only the admin has rights on creating new accounts.&#10;&#10;Main Features&#10;- Sales Transactions: Enter the total amount due and received to calculate change.&#10;- Denomination Breakdown: Displays the optimal combination of bills for change.&#10;- User Management: Admins can add or remove users.&#10;- AI Assistant (Ollama): Get real-time assistance on transactions, troubleshooting, and system usage.&#10;" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                              <TextArea fx:id="helpArea2" layoutX="876.0" layoutY="92.0" prefHeight="238.0" prefWidth="618.0" text="The AI Assistant helps answer your queries about using PayPoint.&#10;&#10;How to Ask Questions&#10;- Type your question in the assistant chat box and press Enter.&#10;Examples of what you can ask:&#10;- &quot;How do I reset a transaction?&quot;&#10;- &quot;What is the correct change for ₱500 on a ₱275 purchase?&quot;&#10;- &quot;How do I add a new user?&quot;&#10;&#10;AI Assistant Limitations&#10;- The assistant provides guidance based on programmed rules.&#10;- It does not process live financial data.&#10;- For security reasons, it cannot reset transactions or modify users directly." wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                              <TextArea fx:id="helpArea3" layoutX="885.0" layoutY="414.0" prefHeight="126.0" prefWidth="618.0" text="AI response does not appear?&#10;&#10;Sometimes the AI would take a long time to answer giving an illusion of &quot;lag&quot;. The solution to this is to simply wait." wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                              <Label layoutX="783.0" layoutY="558.0" prefHeight="35.0" prefWidth="395.0" text="Version Information">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="helpArea4" layoutX="878.0" layoutY="609.0" prefHeight="126.0" prefWidth="618.0" text="Current Version: PayPoint 1.0&#10;Release Data: March 14, 2025&#10;Build 1.0.0&#10;Developed by: John Jay R. Tolentino" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                           </children></AnchorPane>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

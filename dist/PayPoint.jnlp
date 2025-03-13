@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PayPoint.jnlp">
+  <information>
+    <title>PayPoint</title>
+    <vendor>johnray</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="PayPoint.jar" size="401060" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\mysql-connector-j-9.2.0.jar" size="2609756" download="eager" />
+    <jar href="lib\org.json-1.6-20240205.jar" size="64685" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="PayPoint" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="paypoint.PayPoint"  name="PayPoint" />
+  <update check="always"/>
+</jnlp>

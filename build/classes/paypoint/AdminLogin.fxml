@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paypoint.AdminLogin">
+   <children>
+      <VBox prefHeight="900.0" prefWidth="1392.0">
+         <children>
+            <Pane fx:id="logo_pane" prefHeight="244.0" prefWidth="1600.0" styleClass="logo_pane" stylesheets="@styles.css">
+               <children>
+                  <ImageView fitHeight="197.0" fitWidth="195.0" layoutX="479.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../logo-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIconView fx:id="userClient" glyphName="ARROW_LEFT" layoutX="1154.0" layoutY="36.0" onMouseClicked="#userClient" size="20" />
+               </children>
+            </Pane>
+            <Pane prefHeight="478.0" prefWidth="950.0">
+               <children>
+                  <TextField fx:id="username" layoutX="521.0" layoutY="176.0" opacity="0.7" promptText="Username">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <PasswordField fx:id="password" layoutX="520.0" layoutY="244.0" opacity="0.7" promptText="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font></PasswordField>
+                  <Button fx:id="loginButton" layoutX="530.0" layoutY="315.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="126.0" text="Sign in">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Label layoutX="243.0" layoutY="41.0" text="Administrator Login Page">
+                     <font>
+                        <Font name="Cambria Math" size="64.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="446.0" layoutY="212.0" size="50" />
+                  <FontAwesomeIconView glyphName="KEY" layoutX="437.0" layoutY="288.0" size="50" text="" />
+                  <Label fx:id="wrongLogIn" alignment="CENTER" layoutX="432.0" layoutY="122.0" prefHeight="35.0" prefWidth="401.0" styleClass="wrongLogIn" stylesheets="@styles.css" textFill="RED">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="side_anchorpane" prefHeight="900.0" prefWidth="619.0" styleClass="side_anchorpane" stylesheets="@styles.css">
+         <children>
+            <Polygon fill="#e5f4ff91" layoutX="116.0" layoutY="197.0" opacity="0.4" points="-42.800010681152344, 43.80003356933594, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Circle fill="#e5f4ff" layoutX="277.0" layoutY="586.0" opacity="0.4" radius="64.0" stroke="WHITE" strokeWidth="0.0" />
+            <Polygon fill="#e5f4ff91" layoutX="240.0" layoutY="234.0" opacity="0.4" points="97.19998168945312, -60.99995422363281, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Polygon fill="#e5f4ff91" layoutX="69.0" layoutY="687.0" opacity="0.4" points="115.19998168945312, -0.99993896484375, 53.600013732910156, 24.800048828125, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Label layoutX="28.0" layoutY="289.0" text="Trouble Logging in?" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="371.0" text="Contact your administrator" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="167.0" layoutY="437.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="111.0" text="Report">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

@@ -1,0 +1,129 @@
+/* Sidebar */
+.side_anchorpane {
+    -fx-background-color: #5A67D8;  /* Modern Indigo */
+    -fx-border-width: 0 0 0 2px;
+    -fx-border-color: #2D3748;
+}
+
+/* Logo Pane */
+.logo_pane {
+    -fx-background-color: #fc9a61;  /* Soft White */
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #CBD5E0;
+}
+
+/* Logout Button */
+.logoutButton {
+    -fx-background-color: #2D3748;  /* Dark Gray */
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.logoutButton:hover {
+    -fx-background-color: #1A202C;  /* Slightly Darker on Hover */
+}
+
+/* Tab Pane */
+.tabPane {
+    -fx-background-color: #F7FAFC;
+    -fx-tab-min-width: 120px;
+    -fx-tab-max-width: 200px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #CBD5E0;
+}
+
+/* Prompt Area */
+.promptArea {
+    -fx-border-radius: 8px;
+    -fx-padding: 3px;
+}
+
+/* Record Button */
+.recordButton {
+    -fx-background-color: #5A67D8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.recordButton:hover {
+    -fx-background-color: #4C51BF;  /* Darker Indigo */
+}
+
+/* Response Area */
+.responseArea {  /* Light Gray */
+    -fx-border-radius: 8px;
+    -fx-padding: 3px;
+}
+
+/* Change Area */
+.changeArea {
+
+    -fx-border-radius: 8px;
+    -fx-padding: 3px;
+}
+
+/* Denomination Table */
+.denominationTable {
+    -fx-background-color: #F7FAFC;
+    -fx-border-color: #CBD5E0;
+    -fx-border-radius: 8px;
+}
+
+.tab-pane-modern {
+    -fx-tab-min-width: 150px;
+    -fx-tab-max-width: 150px;
+    -fx-tab-min-height: 40px;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 8px;
+}
+
+.label-modern {
+    -fx-text-fill: #333;
+}
+
+.input-modern {
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #d1d1d1;
+    -fx-padding: 5px;
+}
+
+.button-modern {
+    -fx-font-size: 18px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 16px;
+}
+
+.table-modern {
+    -fx-border-color: #ddd;
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-modern .column-header {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.linePane {
+    -fx-background-color: #fcfcfc;
+    -fx-background-radius:20px;
+}
+
+.piePane {
+    -fx-background-color: #fcfcfc;
+    -fx-background-radius:20px;
+}
+
+.addUserPane {
+    -fx-background-color: white;
+}
