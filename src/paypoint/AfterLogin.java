@@ -34,6 +34,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.event.Event;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
@@ -218,8 +219,10 @@ public class AfterLogin implements Initializable {
         }
     }
 
-    private void populateLineChart(String interval) {
-        String query = "";
+
+
+private void populateLineChart(String interval) {
+    String query = "";
     switch (interval) {
         case "Hours":
             query = "SELECT DATE_FORMAT(transaction_date, '%Y-%m-%d %H:00:00') AS time_period, " +
@@ -240,37 +243,42 @@ public class AfterLogin implements Initializable {
             break;
     }
 
-        try (Connection conn = connect();
-             PreparedStatement stmt = conn.prepareStatement(query);
-             ResultSet rs = stmt.executeQuery()) {
+    try (Connection conn = connect();
+         PreparedStatement stmt = conn.prepareStatement(query);
+         ResultSet rs = stmt.executeQuery()) {
 
-            lineChart.getData().clear();
-            XYChart.Series<String, Number> series = new XYChart.Series<>();
-            series.setName("Transaction Count");
+        lineChart.getData().clear();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Transaction Count");
 
-            int totalTransactions = 0;
-            double totalProfit = 0.0;
+        int totalTransactions = 0;
+        double totalProfit = 0.0;
 
-            while (rs.next()) {
-                String timePeriod = rs.getString("time_period");
-                int transactionCount = rs.getInt("transaction_count");
-                double profit = rs.getDouble("total_profit");
+        while (rs.next()) {
+            String timePeriod = rs.getString("time_period");
+            int transactionCount = rs.getInt("transaction_count");
+            double profit = rs.getDouble("total_profit");
 
-                totalTransactions += transactionCount;
-                totalProfit += profit;
+            totalTransactions += transactionCount;
+            totalProfit += profit;
 
-                series.getData().add(new XYChart.Data<>(timePeriod, transactionCount));
-            }
-
-            lineChart.getData().add(series);
-
-            totalTransactionsField.setText(String.valueOf(totalTransactions));
-            totalProfitField.setText(String.format("₱ %.2f", totalProfit));
-
-        } catch (Exception e) {
-            e.printStackTrace();
+            series.getData().add(new XYChart.Data<>(timePeriod, transactionCount));
         }
+
+        lineChart.getData().add(series);
+
+        CategoryAxis xAxis = (CategoryAxis) lineChart.getXAxis();
+        xAxis.setLabel("");
+        xAxis.setTickLabelRotation(0);
+        xAxis.getCategories().clear();
+
+        totalTransactionsField.setText(String.valueOf(totalTransactions));
+        totalProfitField.setText(String.format("₱ %.2f", totalProfit));
+
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
 
     private void loadDenominationInventory() {
         ObservableList<Denomination> inventoryList = FXCollections.observableArrayList();

@@ -26,7 +26,7 @@
                         <Image url="@../logo-removebg-preview.png" />
                      </image>
                   </ImageView>
-                  <FontAwesomeIconView fx:id="userClient" glyphName="ARROW_LEFT" layoutX="1154.0" layoutY="36.0" onMouseClicked="#userClient" size="20" />
+                  <FontAwesomeIconView fx:id="userClient" glyphName="ARROW_LEFT" layoutX="1273.0" layoutY="39.0" onMouseClicked="#userClient" size="20" />
                </children>
             </Pane>
             <Pane prefHeight="478.0" prefWidth="950.0">
@@ -58,26 +58,14 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="side_anchorpane" prefHeight="900.0" prefWidth="619.0" styleClass="side_anchorpane" stylesheets="@styles.css">
+      <AnchorPane fx:id="side_anchorpane" prefHeight="900.0" prefWidth="362.0" styleClass="side_anchorpane" stylesheets="@styles.css">
          <children>
             <Polygon fill="#e5f4ff91" layoutX="116.0" layoutY="197.0" opacity="0.4" points="-42.800010681152344, 43.80003356933594, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
-            <Circle fill="#e5f4ff" layoutX="277.0" layoutY="586.0" opacity="0.4" radius="64.0" stroke="WHITE" strokeWidth="0.0" />
-            <Polygon fill="#e5f4ff91" layoutX="240.0" layoutY="234.0" opacity="0.4" points="97.19998168945312, -60.99995422363281, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Circle fill="#e5f4ff" layoutX="221.0" layoutY="582.0" opacity="0.4" radius="64.0" stroke="WHITE" strokeWidth="0.0" />
+            <Polygon fill="#e5f4ff91" layoutX="187.0" layoutY="241.0" opacity="0.4" points="97.19998168945312, -60.99995422363281, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
             <Polygon fill="#e5f4ff91" layoutX="69.0" layoutY="687.0" opacity="0.4" points="115.19998168945312, -0.99993896484375, 53.600013732910156, 24.800048828125, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
-            <Label layoutX="28.0" layoutY="289.0" text="Trouble Logging in?" textFill="WHITE">
-               <font>
-                  <Font name="Rockwell Bold" size="36.0" />
-               </font>
-            </Label>
-            <Label layoutX="71.0" layoutY="371.0" text="Contact your administrator" textFill="WHITE">
-               <font>
-                  <Font name="Rockwell" size="24.0" />
-               </font>
-            </Label>
-            <Button layoutX="167.0" layoutY="437.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="111.0" text="Report">
-               <font>
-                  <Font size="18.0" />
-               </font></Button>
+            <Polygon fill="#e5f4ff91" layoutX="161.0" layoutY="352.0" opacity="0.4" points="-42.800010681152344, 43.80003356933594, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Polygon fill="#e5f4ff91" layoutX="26.0" layoutY="532.0" opacity="0.4" points="115.19998168945312, -0.99993896484375, 53.600013732910156, 24.800048828125, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
          </children>
       </AnchorPane>
    </children>

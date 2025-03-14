@@ -21,36 +21,36 @@
          <children>
             <Pane fx:id="logo_pane" prefHeight="244.0" prefWidth="1600.0" styleClass="logo_pane" stylesheets="@styles.css">
                <children>
-                  <ImageView fitHeight="197.0" fitWidth="195.0" layoutX="479.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="197.0" fitWidth="195.0" layoutX="545.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../logo-removebg-preview.png" />
                      </image>
                   </ImageView>
-                  <FontAwesomeIconView fx:id="userSecret" glyphName="USER_SECRET" layoutX="1154.0" layoutY="36.0" onMouseClicked="#userSecret" size="20" />
+                  <FontAwesomeIconView fx:id="userSecret" glyphName="USER_SECRET" layoutX="1214.0" layoutY="36.0" onMouseClicked="#userSecret" size="20" />
                </children>
             </Pane>
             <Pane prefHeight="478.0" prefWidth="950.0">
                <children>
-                  <TextField fx:id="username" layoutX="521.0" layoutY="176.0" opacity="0.7" promptText="Username">
+                  <TextField fx:id="username" layoutX="572.0" layoutY="178.0" opacity="0.7" promptText="Username">
                      <font>
                         <Font size="18.0" />
                      </font></TextField>
-                  <PasswordField fx:id="password" layoutX="520.0" layoutY="244.0" opacity="0.7" promptText="Password">
+                  <PasswordField fx:id="password" layoutX="571.0" layoutY="246.0" opacity="0.7" promptText="Password">
                      <font>
                         <Font size="18.0" />
                      </font></PasswordField>
-                  <Button fx:id="loginButton" layoutX="530.0" layoutY="315.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="126.0" text="Sign in">
+                  <Button fx:id="loginButton" layoutX="581.0" layoutY="317.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="126.0" text="Sign in">
                      <font>
                         <Font size="18.0" />
                      </font></Button>
-                  <Label layoutX="291.0" layoutY="41.0" text="Login to Your Account">
+                  <Label layoutX="342.0" layoutY="43.0" text="Login to Your Account">
                      <font>
                         <Font name="Cambria Math" size="64.0" />
                      </font>
                   </Label>
-                  <FontAwesomeIconView glyphName="USER" layoutX="446.0" layoutY="212.0" size="50" />
-                  <FontAwesomeIconView glyphName="KEY" layoutX="437.0" layoutY="288.0" size="50" text="" />
-                  <Label fx:id="wrongLogIn" alignment="CENTER" layoutX="432.0" layoutY="122.0" prefHeight="35.0" prefWidth="401.0" styleClass="wrongLogIn" stylesheets="@styles.css" textFill="RED">
+                  <FontAwesomeIconView glyphName="USER" layoutX="497.0" layoutY="214.0" size="50" />
+                  <FontAwesomeIconView glyphName="KEY" layoutX="488.0" layoutY="290.0" size="50" text="" />
+                  <Label fx:id="wrongLogIn" alignment="CENTER" layoutX="483.0" layoutY="124.0" prefHeight="35.0" prefWidth="401.0" styleClass="wrongLogIn" stylesheets="@styles.css" textFill="RED">
                      <font>
                         <Font size="24.0" />
                      </font></Label>
@@ -58,26 +58,15 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="side_anchorpane" prefHeight="900.0" prefWidth="619.0" styleClass="side_anchorpane" stylesheets="@styles.css">
+      <AnchorPane fx:id="side_anchorpane" prefHeight="900.0" prefWidth="362.0" styleClass="side_anchorpane" stylesheets="@styles.css">
          <children>
             <Polygon fill="#e5f4ff91" layoutX="116.0" layoutY="197.0" opacity="0.4" points="-42.800010681152344, 43.80003356933594, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
-            <Circle fill="#e5f4ff" layoutX="277.0" layoutY="586.0" opacity="0.4" radius="64.0" stroke="WHITE" strokeWidth="0.0" />
+            <Circle fill="#e5f4ff" layoutX="224.0" layoutY="560.0" opacity="0.4" radius="64.0" stroke="WHITE" strokeWidth="0.0" />
             <Polygon fill="#e5f4ff91" layoutX="240.0" layoutY="234.0" opacity="0.4" points="97.19998168945312, -60.99995422363281, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
             <Polygon fill="#e5f4ff91" layoutX="69.0" layoutY="687.0" opacity="0.4" points="115.19998168945312, -0.99993896484375, 53.600013732910156, 24.800048828125, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
-            <Label layoutX="28.0" layoutY="289.0" text="Trouble Logging in?" textFill="WHITE">
-               <font>
-                  <Font name="Rockwell Bold" size="36.0" />
-               </font>
-            </Label>
-            <Label layoutX="71.0" layoutY="371.0" text="Contact your administrator" textFill="WHITE">
-               <font>
-                  <Font name="Rockwell" size="24.0" />
-               </font>
-            </Label>
-            <Button layoutX="167.0" layoutY="437.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="111.0" text="Report">
-               <font>
-                  <Font size="18.0" />
-               </font></Button>
+            <Polygon fill="#e5f4ff91" layoutX="184.0" layoutY="359.0" opacity="0.4" points="-42.800010681152344, 43.80003356933594, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Polygon fill="#e5f4ff91" layoutX="135.0" layoutY="115.0" opacity="0.4" points="115.19998168945312, -0.99993896484375, 53.600013732910156, 24.800048828125, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
+            <Polygon fill="#e5f4ff91" layoutX="32.0" layoutY="538.0" opacity="0.4" points="97.19998168945312, -60.99995422363281, 40.399940490722656, -0.999969482421875, 0.5999755859375, -40.39997863769531" stroke="WHITE" strokeWidth="0.0" />
          </children>
       </AnchorPane>
    </children>

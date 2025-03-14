@@ -76,7 +76,7 @@ private void checkLogin() throws IOException {
             return;
         }
 
-        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+        String sql = "SELECT * FROM users WHERE username = ? AND password = SHA2(?, 256)";
         
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, username.getText());

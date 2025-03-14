@@ -10,7 +10,7 @@ import java.net.URL;
 public class OllamaIntegration {
 
     public static String runOllamaModel(String prompt) throws IOException {
-        String urlString = "http://localhost:11343/v1/engines/llama3.2:1b/completions"; 
+        String urlString = "http://localhost:11434/v1/engines/llama3.2:1b/completions"; 
 
         URL url = new URL(urlString);
 
