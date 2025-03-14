@@ -32,8 +32,8 @@ public class AdminLogin implements Initializable {
     private PasswordField password;
     public static String loggedInUser;
 
-    private static final String ADMIN_USERNAME = "1";
-    private static final String ADMIN_PASSWORD = "1"; 
+    private static final String ADMIN_USERNAME = "admin";
+    private static final String ADMIN_PASSWORD = "1234"; 
 
     public void login(ActionEvent event) throws IOException {
         checkLogin();

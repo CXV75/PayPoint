@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 "# PayPoint" 
+=======
+>>>>>>> 635dc2a (Updated changes)
 PayPoint - JavaFX Cash Register System
 
 Overview
@@ -51,4 +54,8 @@ private static final String PASSWORD = ""; // Default password is empty for XAMP
 5. Run the Project in NetBeans
 Open NetBeans and load the project.
 Ensure JavaFX is properly configured.
+<<<<<<< HEAD
 Click Run to start the application.
+=======
+Click Run to start the application.
+>>>>>>> 635dc2a (Updated changes)

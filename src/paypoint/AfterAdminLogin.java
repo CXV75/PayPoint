@@ -198,6 +198,7 @@ public class AfterAdminLogin implements Initializable {
 
                     if (rowsAffected > 0) {
                         statusLabel.setText("User deleted successfully.");
+                        deleteID.setText("");
                         loadUsersFromDatabase();
                     } else {
                         statusLabel.setText("Error deleting user.");
@@ -237,12 +238,15 @@ public class AfterAdminLogin implements Initializable {
             }
         }
 
-            String insertQuery = "INSERT INTO users (username, password) VALUES (?, ?)";
+            String insertQuery = "INSERT INTO users (username, password) VALUES (?, SHA2(?, 256))";
             try (PreparedStatement stmt = conn.prepareStatement(insertQuery)) {
                 stmt.setString(1, username);
                 stmt.setString(2, password);
                 stmt.executeUpdate();
                 statusLabel.setText("User added successfully."); 
+                userNew.setText("");
+                passNew.setText("");
+                
             }
         } catch (SQLException e) {
             e.printStackTrace();

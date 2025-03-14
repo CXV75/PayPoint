@@ -1,20 +1,17 @@
-/* Sidebar */
 .side_anchorpane {
-    -fx-background-color: #5A67D8;  /* Modern Indigo */
+    -fx-background-color: #5A67D8;  
     -fx-border-width: 0 0 0 2px;
     -fx-border-color: #2D3748;
 }
 
-/* Logo Pane */
 .logo_pane {
-    -fx-background-color: #fc9a61;  /* Soft White */
+    -fx-background-color: #fc9a61;  
     -fx-border-width: 0 0 2px 0;
     -fx-border-color: #CBD5E0;
 }
 
-/* Logout Button */
 .logoutButton {
-    -fx-background-color: #2D3748;  /* Dark Gray */
+    -fx-background-color: #2D3748; 
     -fx-border-width: 2px;
     -fx-border-radius: 12px;
     -fx-text-fill: white;
@@ -26,10 +23,9 @@
 }
 
 .logoutButton:hover {
-    -fx-background-color: #1A202C;  /* Slightly Darker on Hover */
+    -fx-background-color: #1A202C;  
 }
 
-/* Tab Pane */
 .tabPane {
     -fx-background-color: #F7FAFC;
     -fx-tab-min-width: 120px;
@@ -38,13 +34,11 @@
     -fx-border-color: #CBD5E0;
 }
 
-/* Prompt Area */
 .promptArea {
     -fx-border-radius: 8px;
     -fx-padding: 3px;
 }
 
-/* Record Button */
 .recordButton {
     -fx-background-color: #5A67D8;
     -fx-text-fill: white;
@@ -55,23 +49,21 @@
 }
 
 .recordButton:hover {
-    -fx-background-color: #4C51BF;  /* Darker Indigo */
+    -fx-background-color: #4C51BF; 
 }
 
-/* Response Area */
-.responseArea {  /* Light Gray */
+
+.responseArea {  
     -fx-border-radius: 8px;
     -fx-padding: 3px;
 }
 
-/* Change Area */
 .changeArea {
 
     -fx-border-radius: 8px;
     -fx-padding: 3px;
 }
 
-/* Denomination Table */
 .denominationTable {
     -fx-background-color: #F7FAFC;
     -fx-border-color: #CBD5E0;
@@ -126,4 +118,5 @@
 
 .addUserPane {
     -fx-background-color: white;
+    -fx-border-color:black;
 }

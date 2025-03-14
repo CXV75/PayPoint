@@ -75,7 +75,7 @@
                               <Label layoutX="488.0" layoutY="167.0" text="₱ 1" />
                               <Spinner fx:id="mySpinner8" editable="true" layoutX="519.0" layoutY="162.0" onMouseClicked="#calculate" prefHeight="22.0" prefWidth="66.0" />
                               <Line endX="-105.79998779296875" endY="-346.0" layoutX="906.0" layoutY="341.0" startX="-105.79998779296875" startY="175.0" />
-                              <Label layoutX="833.0" layoutY="206.0" text="Response:">
+                              <Label layoutX="830.0" layoutY="242.0" text="Response:">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font></Label>
@@ -107,7 +107,7 @@
                                     <Font size="18.0" />
                                  </font></Button>
                               <!-- Response TextArea with wrapText enabled -->
-                              <TextArea fx:id="responseArea" layoutX="830.0" layoutY="240.0" prefHeight="206.0" prefWidth="642.0" styleClass="responseArea" stylesheets="@styles.css" wrapText="true" />
+                              <TextArea fx:id="responseArea" layoutX="829.0" layoutY="278.0" prefHeight="206.0" prefWidth="642.0" styleClass="responseArea" stylesheets="@styles.css" wrapText="true" />
                               <TextArea fx:id="changeArea" layoutX="105.0" layoutY="279.0" prefHeight="204.0" prefWidth="663.0" styleClass="changeArea" stylesheets="@styles.css" wrapText="true" />
                               <Button fx:id="recordButton" layoutX="626.0" layoutY="111.0" mnemonicParsing="false" onAction="#recordTransact" prefHeight="46.0" prefWidth="122.0" styleClass="button-modern" stylesheets="@styles.css" text="Record">
                                  <font>
@@ -118,7 +118,7 @@
                         </AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Transactions and Inventory">
+                <Tab text="Transactions">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="895.0">
                            <children>

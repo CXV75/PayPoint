@@ -8,8 +8,9 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="PayPoint.jar" size="401060" download="eager" />
+    <jar href="PayPoint.jar" size="400882" download="eager" />
     <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\javafx-mx.jar" size="36044" download="eager" />
     <jar href="lib\mysql-connector-j-9.2.0.jar" size="2609756" download="eager" />
     <jar href="lib\org.json-1.6-20240205.jar" size="64685" download="eager" />
   </resources>
